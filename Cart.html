@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/animate.css" />
+    <link rel="stylesheet" href="css/material-icons.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/percircle.css" />
+    <link rel="stylesheet" href="css/percircle.rtl.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" type="image/x-icon" href="images/logo.png">
+</head>
+
+<body>
+    <!-- start header -->
+    <header>
+        <div class="head">
+            <div class="top_head">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-7 col-12">
+                            <div class="location">
+                                <button class="btn raise d-flex align-items-center gap5 text-white arrowAfter"
+                                    data-toggle="modal" data-target="#map_modal">
+                                    <span class="height18 font15"><ion-icon name="location-outline"></ion-icon></span>
+                                    <span>Riyadh Aires</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="col-lg-5 col-6 lang_col">
+                            <div class="lang_join">
+                                <button class="btn text-white d-flex align-items-center gap5 raise">
+                                    <span>العربيه</span>
+                                    <img class="width15" src="images/arabic.png" alt="">
+                                </button>
+                                <a class="default_link text-white d-flex align-items-center gap6" href="">
+                                    <img src="images/storeIcon.png" class="width18" alt="">
+                                    <span>Join Us As A Shop</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="nav_head">
+                    <div id="nav_layer" onclick="toggleSide()"></div>
+                    <div class="logo">
+                        <a href="index.html"><img src="images/logo.png" alt="logo"></a>
+                    </div>
+                    <div id="navBar" class="navBar">
+                        <ul>
+                            <li>
+                                <a class="default_link" href="index.html">Home</a>
+                            </li>
+                            <li>
+                                <a class="default_link" href="All_Brands.html">Brands</a>
+                            </li>
+                            <li>
+                                <a class="default_link" href="All_Stores.html">Shops</a>
+                            </li>
+                            <li>
+                                <a class="default_link" href="Help_Center.html">Help Center</a>
+                            </li>
+                            <li>
+                                <a class="default_link" href="Contact_us.html">Contact Us</a>
+                            </li>
+                            <li>
+                                <a class="default_link" href="About_us.html">About Abar</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="user_nav">
+                        <button data-target="#search_modal" data-toggle="modal"
+                            class="btn raise text-white font25 height25 p-0"><ion-icon
+                                name="search-outline"></ion-icon></button>
+                        <a class="default_link text-white d-flex" href="Cart.html">
+                            <div class="d-flex align-items-center gap5 font13">
+                                <div class="badge"><img class="width25" src="images/cart_icon.png" alt="cart icon">
+                                </div>
+                                <div class="cart_value">
+                                    <span>My Cart</span> - <span class="cart_price">2000 R.S</span>
+                                </div>
+                            </div>
+                        </a>
+                        <button class="btn raise toggle_menu d-lg-none d-block" onclick="toggleSide()"><ion-icon
+                                name="menu-outline"></ion-icon></button>
+                        <!-- <button class="btn round_btn up">login</button> -->
+                        <div id="dropUser" class="dropdown">
+                            <button class="btn round_btn bgColor2 up dropdown-toggle" type="button"
+                                id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false">
+                                PORFILE
+                            </button>
+                            <div class="dropdown-menu dropdownMenu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="My_Account.html">
+                                    <img src="images/user.png" alt="user">
+                                    <span>My Account</span>
+                                </a>
+                                <a class="dropdown-item" href="Orders.html">
+                                    <img src="images/bills.png" alt="bills">
+                                    <span>My Orders</span>
+                                </a>
+                                <a class="dropdown-item" href="My_Tickets.html">
+                                    <img src="images/ticket.png" alt="ticket">
+                                    <span>My Tickets</span>
+                                </a>
+                                <a class="dropdown-item" href="Privacy.html">
+                                    <img src="images/Lock.png" alt="Lock">
+                                    <span>privacy policy</span>
+                                </a>
+                                <a class="dropdown-item" href="Terms.html">
+                                    <img src="images/list.png" alt="list">
+                                    <span>Use terms</span>
+                                </a>
+                                <a class="dropdown-item" href="login.html">
+                                    <img src="images/logout.png" alt="logout">
+                                    <span>Log Out</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- content -->
+    <div class="content M_top_50 M_bottom_60">
+        <!-- my_orders sec -->
+        <section class="my_orders mb-5">
+            <div class="container">
+                <div class="white_wrapper P_top_70">
+                    <h1 class="fontBold mainColor2 font25 mb-5 text-center">My Cart</h1>
+                    <div class="center_content">
+                        <div class="collapseBox">
+                            <button class="collapseBtn">
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <div class="d-flex align-items-center gap20">
+                                        <img class="width50" src="images/savola.png" alt="logo brand">
+                                        <div class="d-flex flex-column gap10 align-items-start">
+                                            <span class="font15 fontBold">Savola</span>
+                                            <span class="font13 mainColor4">Back to the store</span>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex align-items-center gap20">
+                                        <span class="baged">+5</span>
+                                        <img class="width15" src="images/arrow_down.png" alt="arrow down">
+                                    </div>
+                                </div>
+                            </button>
+                            <div class="collapseContent">
+                                <div class="table-responsive">
+                                    <table class="table catTable">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">Product</th>
+                                                <th scope="col">Quantity</th>
+                                                <th scope="col">Unit Price</th>
+                                                <th scope="col">Price</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <div class="d-flex align-items-center justify-content-center gap15">
+                                                        <img class="bordered width60 height60 round pt-3 pb-3 pl-1 pr-1" src="images/product_box.png"
+                                                            alt="product box">
+                                                        <div class="d-flex flex-column gap5 align-items-start">
+                                                            <span>Nova 55mL</span>
+                                                            <span class="font11 mainColor4">12 X 20 teabag</span>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="qty counter-div">
+                                                        <button class="plus counter-btn unselectable">+</button>
+                                                        <input type="text" value="0" class="count output" disabled="">
+                                                        <button class="minus counter-btn unselectable">-</button>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <span class="mainColor3 fontBold">300 SAR</span>
+                                                </td>
+                                                <td>
+                                                    <span class="mainColor3 fontBold">300 SAR</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="d-flex align-items-center justify-content-center gap15">
+                                                        <img class="bordered width60 height60 round pt-3 pb-3 pl-1 pr-1" src="images/product_box.png"
+                                                            alt="product box">
+                                                        <div class="d-flex flex-column gap5 align-items-start">
+                                                            <span>Nova 55mL</span>
+                                                            <span class="font11 mainColor4">12 X 20 teabag</span>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="qty counter-div">
+                                                        <button class="plus counter-btn unselectable">+</button>
+                                                        <input type="text" value="0" class="count output" disabled="">
+                                                        <button class="minus counter-btn unselectable">-</button>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <span class="mainColor3 fontBold">300 SAR</span>
+                                                </td>
+                                                <td>
+                                                    <span class="mainColor3 fontBold">300 SAR</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="d-flex align-items-center justify-content-center gap15">
+                                                        <img class="bordered width60 height60 round pt-3 pb-3 pl-1 pr-1" src="images/product_box.png"
+                                                            alt="product box">
+                                                        <div class="d-flex flex-column gap5 align-items-start">
+                                                            <span>Nova 55mL</span>
+                                                            <span class="font11 mainColor4">12 X 20 teabag</span>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="qty counter-div">
+                                                        <button class="plus counter-btn unselectable">+</button>
+                                                        <input type="text" value="0" class="count output" disabled="">
+                                                        <button class="minus counter-btn unselectable">-</button>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <span class="mainColor3 fontBold">300 SAR</span>
+                                                </td>
+                                                <td>
+                                                    <span class="mainColor3 fontBold">300 SAR</span>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-end gap30 p-4">
+                                    <button class="btn default_link font15 mainColor4">Empty basket</button>
+                                    <a href="Schedule_order.html" class="btn round_btn up bgColor2">
+                                        <div class="d-flex align-items-center justify-content-between gap60">
+                                            <span>Go to pay</span>
+                                            <span>SAR 499</span>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="collapseBox">
+                            <button class="collapseBtn">
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <div class="d-flex align-items-center gap20">
+                                        <img class="width50" src="images/savola.png" alt="logo brand">
+                                        <div class="d-flex flex-column gap10 align-items-start">
+                                            <span class="font15 fontBold">Savola</span>
+                                            <span class="font13 mainColor4">Back to the store</span>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex align-items-center gap20">
+                                        <span class="baged">+5</span>
+                                        <img class="width15" src="images/arrow_down.png" alt="arrow down">
+                                    </div>
+                                </div>
+                            </button>
+                            <div class="collapseContent">
+
+                                <div class="table-responsive">
+                                    <table class="table catTable">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">Product</th>
+                                                <th scope="col">Quantity</th>
+                                                <th scope="col">Unit Price</th>
+                                                <th scope="col">Price</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <div class="d-flex align-items-center justify-content-center gap15">
+                                                        <img class="bordered width60 height60 round pt-3 pb-3 pl-1 pr-1" src="images/product_box.png"
+                                                            alt="product box">
+                                                        <div class="d-flex flex-column gap5 align-items-start">
+                                                            <span>Nova 55mL</span>
+                                                            <span class="font11 mainColor4">12 X 20 teabag</span>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="qty counter-div">
+                                                        <button class="plus counter-btn unselectable">+</button>
+                                                        <input type="text" value="0" class="count output" disabled="">
+                                                        <button class="minus counter-btn unselectable">-</button>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <span class="mainColor3 fontBold">300 SAR</span>
+                                                </td>
+                                                <td>
+                                                    <span class="mainColor3 fontBold">300 SAR</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="d-flex align-items-center justify-content-center gap15">
+                                                        <img class="bordered width60 height60 round pt-3 pb-3 pl-1 pr-1" src="images/product_box.png"
+                                                            alt="product box">
+                                                        <div class="d-flex flex-column gap5 align-items-start">
+                                                            <span>Nova 55mL</span>
+                                                            <span class="font11 mainColor4">12 X 20 teabag</span>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="qty counter-div">
+                                                        <button class="plus counter-btn unselectable">+</button>
+                                                        <input type="text" value="0" class="count output" disabled="">
+                                                        <button class="minus counter-btn unselectable">-</button>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <span class="mainColor3 fontBold">300 SAR</span>
+                                                </td>
+                                                <td>
+                                                    <span class="mainColor3 fontBold">300 SAR</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="d-flex align-items-center justify-content-center gap15">
+                                                        <img class="bordered width60 height60 round pt-3 pb-3 pl-1 pr-1" src="images/product_box.png"
+                                                            alt="product box">
+                                                        <div class="d-flex flex-column gap5 align-items-start">
+                                                            <span>Nova 55mL</span>
+                                                            <span class="font11 mainColor4">12 X 20 teabag</span>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="qty counter-div">
+                                                        <button class="plus counter-btn unselectable">+</button>
+                                                        <input type="text" value="0" class="count output" disabled="">
+                                                        <button class="minus counter-btn unselectable">-</button>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <span class="mainColor3 fontBold">300 SAR</span>
+                                                </td>
+                                                <td>
+                                                    <span class="mainColor3 fontBold">300 SAR</span>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                                <div class="d-flex align-items-center justify-content-end gap30 p-4">
+                                    <button class="btn default_link font15 mainColor4">Empty basket</button>
+                                    <a href="Schedule_order.html" class="btn round_btn up bgColor2">
+                                        <div class="d-flex align-items-center justify-content-between gap60">
+                                            <span>Go to pay</span>
+                                            <span>SAR 499</span>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- end content -->
+
+    <footer>
+        <div class="container">
+            <div class="foorer_wrapper">
+                <div class="logo_social">
+                    <img class="logo_footer" src="images/logo.png" alt="logo">
+                    <p class="mb-0 font12 text-white">
+                        Nostrud exertation ullamco labor nisi
+                        aliquip commodo duis.
+                    </p>
+                    <div class="social">
+                        <a class="raise" href="">
+                            <img class="width10" src="images/facebook.png" alt="facebook">
+                        </a>
+                        <a class="raise" href="">
+                            <img src="images/twitter.png" alt="facebook">
+                        </a>
+                        <a class="raise" href="">
+                            <img src="images/google-plus.png" alt="facebook">
+                        </a>
+                        <a class="raise" href="">
+                            <img src="images/instagram.png" alt="facebook">
+                        </a>
+                    </div>
+                </div>
+                <div class="footer_list">
+                    <h6 class="mb-5 text-white fontBold">Address</h6>
+                    <ul>
+                        <li>
+                            <div>
+                                <span class="height15 P_top_3"><ion-icon name="location-outline"></ion-icon></span>
+                                <span class="font13">
+                                    1500 Treat Ave, Suite 200
+                                    San Francisco, CA 94110
+                                </span>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <span class="height15 P_top_3"><ion-icon name="mail-outline"></ion-icon></span>
+                                <span class="font13">
+                                    vctung@outlook.com
+                                </span>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <span class="height15 P_top_3"><ion-icon name="call-outline"></ion-icon></span>
+                                <span class="font13">
+                                    1-800-800-2299 (Support)
+                                </span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer_list">
+                    <h6 class="mb-5 text-white fontBold">Links</h6>
+                    <ul>
+                        <li>
+                            <a class="default_link" href="index.html">Home</a>
+                        </li>
+                        <li>
+                            <a class="default_link" href="All_Brands.html">Brands</a>
+                        </li>
+                        <li>
+                            <a class="default_link" href="All_Stores.html">Shops</a>
+                        </li>
+                        <li>
+                            <a class="default_link" href="All_Offers.html">Promotion And Details</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer_list">
+                    <h6 class="mb-5 text-white fontBold">Support</h6>
+                    <ul>
+                        <li>
+                            <a class="default_link" href="Help_Center.html">FAQ</a>
+                        </li>
+                        <li>
+                            <a class="default_link" href="Contact_us.html">Call Us</a>
+                        </li>
+                        <li>
+                            <a class="default_link" href="Help_Center.html">Help Center</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer_list">
+                    <h6 class="mb-5 text-white fontBold">More</h6>
+                    <ul>
+                        <li>
+                            <a class="default_link" href="About_us.html">About Abar</a>
+                        </li>
+                        <li>
+                            <a class="default_link" href="Privacy.html">Privacy Policy</a>
+                        </li>
+                        <li>
+                            <a class="default_link" href="Terms.html">Terms Of Use</a>
+                        </li>
+                        <li>
+                            <a class="default_link" href="Blog.html">Blog</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <hr class="mainBgOpaci">
+        <div class="container">
+            <div class="d-flex align-items-center justify-content-between">
+                <span class="font12 text-white d-flex align-items-center gap5">Copyrights <span
+                        class="mb-0 font25 height27">©</span> 2023 Abar</span>
+                <span class="text-white font13">Design By <a class="default_link text-white" href="https://aait.sa/"
+                        target="_blank">Awammer El Shabaka</a></span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- map modal -->
+    <div id="map_modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal_header">
+                    <button class="btn dismiss_btn" data-dismiss="modal"><ion-icon
+                            name="close-outline"></ion-icon></button>
+                    <h6 class="mb-0 text-center">Delivery Address</h6>
+                </div>
+
+                <div class="modalBody">
+                    <div class="map_form" id="input_form">
+                        <span><ion-icon name="search-outline"></ion-icon></span>
+                        <input id="pac-input" class="controls" type="text"
+                            placeholder="Search for area, street, land mark" />
+                    </div>
+                    <div id="map" style="height: 250px;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- search modal -->
+    <div id="search_modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content" style="background-color: unset;">
+                <div class="modalBody p-0">
+                    <form action="">
+                        <div class="form__label mt-0">
+                            <input type="search" class="default_input" placeholder="Enter Key Word">
+                            <label class="float__label">Enter Key Word</label>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/percircle.js"></script>
+    <script type="text/javascript">
+        new WOW().init();
+    </script>
+    <!-- ionicon fonts -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <!-- map api -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBn3NtsJ5lgHSIxUJ4AuqAMm2RXldDDjN8&callback=initAutocomplete&libraries=places&v=weekly" defer></script> 
+    <script src="js/map.js"></script>
+    <!-- main js -->
+    <script src="js/main.js"></script>
+
+    <script>
+        $(function() {
+            $(".collapseBox").on("click" , ".collapseBtn" , function() {
+                $(this).parent('.collapseBox').find('.collapseContent').slideToggle(300)
+                $(".collapseContent").not($(this).parent('.collapseBox').find('.collapseContent')).slideUp(300);
+            });
+        });
+    </script>
+
+
+    <script>
+
+        $(document).ready(function () {
+            $('.count').prop('disabled', true);
+            $(document).on('click', '.plus', function () {
+                var count = $(this).closest(".qty").find(".count");
+                $(count).val(parseInt($(count).val()) + 1);
+            });
+            $(document).on('click', '.minus', function () {
+                var count = $(this).closest(".qty").find(".count");
+                $(count).val(parseInt($(count).val()) - 1);
+                if ($(count).val() == 0 || $(count).val() < 0) {
+                    $(count).val(0);
+                }
+            });
+        });
+
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            var sideButtons = document.querySelector('.navBar ul').getElementsByTagName('li');
+            for (var i = 0; i < sideButtons.length; i++) {
+                const a = sideButtons[i].getElementsByTagName('a')[0];
+                if (window.location.href == a.href) {
+                    sideButtons[i].classList.add('active');
+                    break;
+                }
+            }
+        })
+    </script>
+
+</body>
+
+</html>

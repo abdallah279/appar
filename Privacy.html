@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/animate.css" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" type="image/x-icon" href="images/logo.png">
+</head>
+
+<body>
+    <!-- start header -->
+    <header>
+        <div class="head">
+            <div class="top_head">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-7 col-12">
+                            <div class="location">
+                                <button class="btn raise d-flex align-items-center gap5 text-white arrowAfter"
+                                    onclick="map_luncher(this)" data-map="map_modal" data-toggle="modal"
+                                    data-target="#mapModal">
+                                    <span class="height18 font15"><ion-icon name="location-outline"></ion-icon></span>
+                                    <span>Riyadh Aires</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="col-lg-5 col-6 lang_col">
+                            <div class="lang_join">
+                                <button class="btn text-white d-flex align-items-center gap5 raise">
+                                    <span>العربيه</span>
+                                    <img class="width15" src="images/arabic.png" alt="">
+                                </button>
+                                <a class="default_link text-white d-flex align-items-center gap6" href="">
+                                    <img src="images/storeIcon.png" class="width18" alt="">
+                                    <span>Join Us As A Shop</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="nav_head">
+                    <div id="nav_layer" onclick="toggleSide()"></div>
+                    <div class="logo">
+                        <a href="index.html"><img src="images/logo.png" alt="logo"></a>
+                    </div>
+                    <div id="navBar" class="navBar">
+                        <ul>
+                            <li>
+                                <a class="default_link" href="index.html">Home</a>
+                            </li>
+                            <li>
+                                <a class="default_link" href="All_Brands.html">Brands</a>
+                            </li>
+                            <li>
+                                <a class="default_link" href="All_Stores.html">Shops</a>
+                            </li>
+                            <li>
+                                <a class="default_link" href="Help_Center.html">Help Center</a>
+                            </li>
+                            <li>
+                                <a class="default_link" href="Contact_us.html">Contact Us</a>
+                            </li>
+                            <li>
+                                <a class="default_link" href="About_us.html">About Abar</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="user_nav">
+                        <button data-target="#search_modal" data-toggle="modal"
+                            class="btn raise text-white font25 height25 p-0"><ion-icon
+                                name="search-outline"></ion-icon></button>
+                        <a class="default_link text-white d-flex" href="">
+                            <div class="d-flex align-items-center gap5 font13">
+                                <div class="badge"><img class="width25" src="images/cart_icon.png" alt="cart icon">
+                                </div>
+                                <div class="cart_value">
+                                    <span>My Cart</span> - <span class="cart_price">2000 R.S</span>
+                                </div>
+                            </div>
+                        </a>
+                        <button class="btn raise toggle_menu d-lg-none d-block" onclick="toggleSide()"><ion-icon
+                                name="menu-outline"></ion-icon></button>
+                        <!-- <button class="btn round_btn up">login</button> -->
+                        <div id="dropUser" class="dropdown">
+                            <button class="btn round_btn bgColor2 up dropdown-toggle" type="button"
+                                id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false">
+                                PORFILE
+                            </button>
+                            <div class="dropdown-menu dropdownMenu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="My_Account.html">
+                                    <img src="images/user.png" alt="user">
+                                    <span>My Account</span>
+                                </a>
+                                <a class="dropdown-item" href="Orders.html">
+                                    <img src="images/bills.png" alt="bills">
+                                    <span>My Orders</span>
+                                </a>
+                                <a class="dropdown-item" href="My_Tickets.html">
+                                    <img src="images/ticket.png" alt="ticket">
+                                    <span>My Tickets</span>
+                                </a>
+                                <a class="dropdown-item" href="Privacy.html">
+                                    <img src="images/Lock.png" alt="Lock">
+                                    <span>privacy policy</span>
+                                </a>
+                                <a class="dropdown-item" href="Terms.html">
+                                    <img src="images/list.png" alt="list">
+                                    <span>Use terms</span>
+                                </a>
+                                <a class="dropdown-item" href="login.html">
+                                    <img src="images/logout.png" alt="logout">
+                                    <span>Log Out</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- content -->
+    <div class="content M_top_50 M_bottom_60">
+        <!-- brands sec -->
+        <section class="mb-5">
+            <div class="container">
+                <div class="bg-white radius10 pt-4">
+                    <div class="d-flex flex-column align-items-center gap15">
+                        <img src="images/logo_main_color.png" class="width100" alt="">
+                        <h4 class="fontBold mainColor2 mb-4 text-center">Privacy Policy</h4>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-lg-10 col-12">
+                            <p class="text-center font15 fontBold lineHeight30">
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard 
+                            </p>
+                            <p class="text-center font15 fontBold lineHeight30">
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard 
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+    </div>
+    <!-- end content -->
+
+    <footer>
+        <div class="container">
+            <div class="foorer_wrapper">
+                <div class="logo_social">
+                    <img class="logo_footer" src="images/logo.png" alt="logo">
+                    <p class="mb-0 font12 text-white">
+                        Nostrud exertation ullamco labor nisi
+                        aliquip commodo duis.
+                    </p>
+                    <div class="social">
+                        <a class="raise" href="">
+                            <img class="width10" src="images/facebook.png" alt="facebook">
+                        </a>
+                        <a class="raise" href="">
+                            <img src="images/twitter.png" alt="facebook">
+                        </a>
+                        <a class="raise" href="">
+                            <img src="images/google-plus.png" alt="facebook">
+                        </a>
+                        <a class="raise" href="">
+                            <img src="images/instagram.png" alt="facebook">
+                        </a>
+                    </div>
+                </div>
+                <div class="footer_list">
+                    <h6 class="mb-5 text-white fontBold">Address</h6>
+                    <ul>
+                        <li>
+                            <div>
+                                <span class="height15 P_top_3"><ion-icon name="location-outline"></ion-icon></span>
+                                <span class="font13">
+                                    1500 Treat Ave, Suite 200
+                                    San Francisco, CA 94110
+                                </span>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <span class="height15 P_top_3"><ion-icon name="mail-outline"></ion-icon></span>
+                                <span class="font13">
+                                    vctung@outlook.com
+                                </span>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <span class="height15 P_top_3"><ion-icon name="call-outline"></ion-icon></span>
+                                <span class="font13">
+                                    1-800-800-2299 (Support)
+                                </span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer_list">
+                    <h6 class="mb-5 text-white fontBold">Links</h6>
+                    <ul>
+                        <li>
+                            <a class="default_link" href="index.html">Home</a>
+                        </li>
+                        <li>
+                            <a class="default_link" href="All_Brands.html">Brands</a>
+                        </li>
+                        <li>
+                            <a class="default_link" href="All_Stores.html">Shops</a>
+                        </li>
+                        <li>
+                            <a class="default_link" href="All_Offers.html">Promotion And Details</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer_list">
+                    <h6 class="mb-5 text-white fontBold">Support</h6>
+                    <ul>
+                        <li>
+                            <a class="default_link" href="Help_Center.html">FAQ</a>
+                        </li>
+                        <li>
+                            <a class="default_link" href="Contact_us.html">Call Us</a>
+                        </li>
+                        <li>
+                            <a class="default_link" href="Help_Center.html">Help Center</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer_list">
+                    <h6 class="mb-5 text-white fontBold">More</h6>
+                    <ul>
+                        <li>
+                            <a class="default_link" href="About_us.html">About Abar</a>
+                        </li>
+                        <li>
+                            <a class="default_link" href="Privacy.html">Privacy Policy</a>
+                        </li>
+                        <li>
+                            <a class="default_link" href="Terms.html">Terms Of Use</a>
+                        </li>
+                        <li>
+                            <a class="default_link" href="Blog.html">Blog</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <hr class="mainBgOpaci">
+        <div class="container">
+            <div class="d-flex align-items-center justify-content-between">
+                <span class="font12 text-white d-flex align-items-center gap5">Copyrights <span
+                        class="mb-0 font25 height27">©</span> 2023 Abar</span>
+                <span class="text-white font13">Design By <a class="default_link text-white" href="https://aait.sa/"
+                        target="_blank">Awammer El Shabaka</a></span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- map modal -->
+    <div id="mapModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal_header">
+                    <button class="btn dismiss_btn" data-dismiss="modal"><ion-icon
+                            name="close-outline"></ion-icon></button>
+                    <h6 class="mb-0 text-center">DELIVERY ADDRESS</h6>
+                </div>
+
+                <div class="modalBody">
+                    <div class="position-relative">
+                        <div id="map_modal" style="height: 300px"></div>
+                        <div class="map_form" id="map_modal_input_form">
+                            <span><ion-icon name="search-outline"></ion-icon></span>
+                            <input type="text" id="map_modal_search-input"
+                                placeholder="Search for area, street, land mark">
+                        </div>
+                    </div>
+                    <input type="hidden" id="map_modal_lat">
+                    <input type="hidden" id="map_modal_lng">
+                    <h6 class="mt-3 mb-2 mainColor3 font13">Delivery to</h6>
+                    <div id="map_modal_output" class="font14 mb-2"></div>
+                    <button class="btn round_btn up bgColor2 w-100 height45">Delivery Here </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- search modal -->
+    <div id="search_modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content" style="background-color: unset;">
+                <div class="modalBody p-0">
+                    <form action="">
+                        <div class="form__label mt-0">
+                            <input type="search" class="default_input" placeholder="Enter Key Word">
+                            <label class="float__label">Enter Key Word</label>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script type="text/javascript">
+        new WOW().init();
+    </script>
+    <!-- ionicon fonts -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <!-- map api -->
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBn3NtsJ5lgHSIxUJ4AuqAMm2RXldDDjN8&callback=initAutocomplete&libraries=places&v=weekly"
+        defer></script>
+    <script src="js/map.js"></script>
+    <!-- main js -->
+    <script src="js/main.js"></script>
+
+
+    <script>
+        $(document).ready(function () {
+            var sideButtons = document.querySelector('.navBar ul').getElementsByTagName('li');
+            for (var i = 0; i < sideButtons.length; i++) {
+                const a = sideButtons[i].getElementsByTagName('a')[0];
+                if (window.location.href == a.href) {
+                    sideButtons[i].classList.add('active');
+                    break;
+                }
+            }
+        })
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,1066 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/animate.css" />
+    <link rel="stylesheet" href="css/material-icons.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/nice-select.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" type="image/x-icon" href="images/logo.png">
+</head>
+
+<body>
+    <!-- start header -->
+    <header>
+        <div class="head">
+            <div class="top_head">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-7 col-12">
+                            <div class="location">
+                                <button class="btn raise d-flex align-items-center gap5 text-white arrowAfter" 
+                                    onclick="map_luncher(this)" 
+                                    data-map="map_modal" 
+                                    data-toggle="modal" 
+                                    data-target="#mapModal">
+                                    <span class="height18 font15"><ion-icon name="location-outline"></ion-icon></span>
+                                    <span>Riyadh Aires</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="col-lg-5 col-6 lang_col">
+                            <div class="lang_join">
+                                <button class="btn text-white d-flex align-items-center gap5 raise">
+                                    <span>العربيه</span>
+                                    <img class="width15" src="images/arabic.png" alt="">
+                                </button>
+                                <a class="default_link text-white d-flex align-items-center gap6" href="">
+                                    <img src="images/storeIcon.png" class="width18" alt="">
+                                    <span>Join Us As A Shop</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="nav_head">
+                    <div id="nav_layer" onclick="toggleSide()"></div>
+                    <div class="logo">
+                        <a href="index.html"><img src="images/logo.png" alt="logo"></a>
+                    </div>
+                    <div id="navBar" class="navBar">
+                        <ul>
+                            <li>
+                                <a class="default_link" href="index.html">Home</a>
+                            </li>
+                            <li>
+                                <a class="default_link" href="All_Brands.html">Brands</a>
+                            </li>
+                            <li>
+                                <a class="default_link" href="All_Stores.html">Shops</a>
+                            </li>
+                            <li>
+                                <a class="default_link" href="Help_Center.html">Help Center</a>
+                            </li>
+                            <li>
+                                <a class="default_link" href="Contact_us.html">Contact Us</a>
+                            </li>
+                            <li>
+                                <a class="default_link" href="About_us.html">About Abar</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="user_nav">
+                        <button data-target="#search_modal" data-toggle="modal"
+                            class="btn raise text-white font25 height25 p-0"><ion-icon
+                                name="search-outline"></ion-icon></button>
+                        <a class="default_link text-white d-flex" href="">
+                            <div class="d-flex align-items-center gap5 font13">
+                                <div class="badge"><img class="width25" src="images/cart_icon.png" alt="cart icon">
+                                </div>
+                                <div class="cart_value">
+                                    <span>My Cart</span> - <span class="cart_price">2000 R.S</span>
+                                </div>
+                            </div>
+                        </a>
+                        <button class="btn raise toggle_menu d-lg-none d-block" onclick="toggleSide()"><ion-icon
+                                name="menu-outline"></ion-icon></button>
+                        <!-- <button class="btn round_btn up">login</button> -->
+                        <div id="dropUser" class="dropdown">
+                            <button class="btn round_btn bgColor2 up dropdown-toggle" type="button"
+                                id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false">
+                                PORFILE
+                            </button>
+                            <div class="dropdown-menu dropdownMenu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="My_Account.html">
+                                    <img src="images/user.png" alt="user">
+                                    <span>My Account</span>
+                                </a>
+                                <a class="dropdown-item" href="Orders.html">
+                                    <img src="images/bills.png" alt="bills">
+                                    <span>My Orders</span>
+                                </a>
+                                <a class="dropdown-item" href="My_Tickets.html">
+                                    <img src="images/ticket.png" alt="ticket">
+                                    <span>My Tickets</span>
+                                </a>
+                                <a class="dropdown-item" href="Privacy.html">
+                                    <img src="images/Lock.png" alt="Lock">
+                                    <span>privacy policy</span>
+                                </a>
+                                <a class="dropdown-item" href="Terms.html">
+                                    <img src="images/list.png" alt="list">
+                                    <span>Use terms</span>
+                                </a>
+                                <a class="dropdown-item" href="login.html">
+                                    <img src="images/logout.png" alt="logout">
+                                    <span>Log Out</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- content -->
+
+    <div class="content M_top_50 M_bottom_60">
+        <div class="container">
+            <div class="grid_user">
+                <div class="aside">
+                    <div class="user_aside">
+                        <div class="d-flex align-items-center gap20 pt-2 pb-2 pl-3 pr-3">
+                            <span class="font14 mainColor3 fontBold">Hello</span>
+                            <span class="font18 fontBold">Salah Elhadidi</span>
+                        </div>
+                        <div class="user_tab">
+                            <div class="d-flex flex-column gap10 mb-2">
+                                <img src="images/barCode.png" class="width100" alt="barCode">
+                                <p class="mb-0 font13 mainColor3 ">
+                                    Share Your Referral Code With Your Friends After Thier First Order , You 'Ll Get
+                                    <span class="text-danger">10 SAR</span> In Your Wallet
+                                </p>
+                            </div>
+                            <div class="code_num">
+                                <h6 class="p-3 font14 fontBold mainColor3 mb-0">AAIT2020</h6>
+                                <div class="d-flex align-items-center gap15 bgColor2 pt-1 pb-1 pl-4 pr-4">
+                                    <a class="default_link d-flex flex-column align-items-center gap2 text-white"
+                                        href="">
+                                        <span class="height20"><ion-icon name="arrow-redo-outline"></ion-icon></span>
+                                        <span class="font12">Share</span>
+                                    </a>
+                                    <span class="text-white">|</span>
+                                    <a class="default_link d-flex flex-column align-items-center gap2 text-white"
+                                        href="">
+                                        <span class="height20">
+                                            <ion-icon name="copy-outline"></ion-icon>
+                                        </span>
+                                        <span class="font12">Copy</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                <li class="nav-item">
+                                    <a class="nav-link active" id="account-tab" data-toggle="tab" href="#account" role="tab"
+                                        aria-controls="account" aria-selected="true">
+                                        <div class="nav_link_cont">
+                                            <span><img src="images/user2.png" class="width20" alt=""></span>
+                                            <span class="font14 fontBold">My Account</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="addresses-tab" data-toggle="tab" href="#addresses"
+                                        role="tab" aria-controls="addresses" aria-selected="false">
+                                        <div class="nav_link_cont">
+                                            <span><img src="images/location.png" class="width20" alt=""></span>
+                                            <span class="font14 fontBold">Addresses</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="payment-tab" data-toggle="tab" href="#payment" role="tab"
+                                        aria-controls="payment" aria-selected="false">
+                                        <div class="nav_link_cont">
+                                            <span><img src="images/payment.png" class="width20" alt=""></span>
+                                            <span class="font14 fontBold">Payment Method</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="wallet-tab" data-toggle="tab" href="#wallet" role="tab"
+                                        aria-controls="wallet" aria-selected="false">
+                                        <div class="nav_link_cont">
+                                            <span><img src="images/wallet.png" class="width20" alt=""></span>
+                                            <span class="font14 fontBold">Wallet</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="ticket-tab" data-toggle="tab" href="#ticket" role="tab"
+                                        aria-controls="ticket" aria-selected="false">
+                                        <div class="nav_link_cont">
+                                            <span><img src="images/ticket2.png" class="width20" alt=""></span>
+                                            <span class="font14 fontBold">My Ticket</span>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid_content">
+                    <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active" id="account" role="tabpanel" aria-labelledby="account-tab">
+                            <div class="tab_title">
+                                <h4 class="fontBold">My Account</h4>
+                                <span class="font17">But I must explain to you how all this.</span>
+                            </div>
+                            <div class="main_card">
+                                <div class="row flex-column">
+                                    <div class="col-lg-8 col-12 mt-3 mb-3">
+                                        <span class="font14">User Name</span>
+                                        <div class="form__label">
+                                            <input class="default_input" type="text"
+                                                placeholder="Please Enter User Name">
+                                            <label class="float__label">Please Enter User Name</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-8 col-12 mt-3 mb-3">
+                                        <span class="font14">Phone</span>
+                                        <div class="form__label">
+                                            <input class="default_input" type="number" placeholder="Please Enter Phone">
+                                            <label class="float__label">Please Enter Phone</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-8 col-12 mt-3 mb-3">
+                                        <span class="font14">Email</span>
+                                        <div class="form__label">
+                                            <input class="default_input" type="email" placeholder="Please Enter Email">
+                                            <label class="float__label">Please Enter Email</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-12 mt-3 mb-3">
+                                        <button class="btn round_btn up bgColor2 w-100">Save</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="addresses" role="tabpanel"
+                            aria-labelledby="addresses-tab">
+                            <div class="select_location">
+                                <div class="tab_title">
+                                    <h4 class="fontBold">Addresses</h4>
+                                    <span class="font17">Please Provide us with further details ,our Support team will
+                                        get
+                                        back to you as soon as possible.</span>
+                                </div>
+                                <div class="main_card">
+                                    <div class="row flex-column">
+                                        <div class="col-lg-6 col-12 mt-3 mb-3">
+                                            <div class="location_card">
+                                                <input type="radio" name="location" class="float_input checkLocation"
+                                                    onchange="checkLocation()">
+                                                <div class="d-flex align-items-center gap20 flex-wrap">
+                                                    <img class="width16" src="images/paper-plane.png" alt="paper plane">
+                                                    <div class="d-flex flex-column gap5 ">
+                                                        <h6 class="mb-0 fontBold">Current Location</h6>
+                                                        <p class="location_address">King Khalid International Airport,
+                                                            Riyadh, Saudi Arabia</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-12 mt-3 mb-3">
+                                            <div class="location_card">
+                                                <input type="radio" name="location" class="float_input checkLocation" onchange="checkLocation()">
+                                                <div class="d-flex align-items-center gap20 flex-wrap">
+                                                    <img class="width16" src="images/homeIcon.png" alt="paper plane">
+                                                    <div class="d-flex flex-column ">
+                                                        <h6 class="mb-0 fontBold">House</h6>
+                                                        <span class="font13">Apartment Salman</span>
+                                                        <p class="location_address">King Khalid International Airport,
+                                                            Riyadh, Saudi Arabia</p>
+                                                    </div>
+                                                </div>
+                                                <div class="option_float Zindex41">
+                                                    <div class="dropdown drop_info">
+                                                        <button class="btn" type="button" id="dropdownMenuButton"
+                                                            data-toggle="dropdown" aria-haspopup="true"
+                                                            aria-expanded="false">
+                                                            <img class="width20" src="images/more.png" alt="more">
+                                                        </button>
+                                                        <div class="dropdown-menu dropdownMenu"
+                                                            aria-labelledby="dropdownMenuButton">
+                                                            <div class="d-flex flex-column mb-2">
+                                                                <span class="font14 fontBold">House</span>
+                                                                <p class="mb-0 font12">
+                                                                    2734 Qutun Ibn Rabiah, Al Aqiq, Riyadh 13515 7925
+                                                                </p>
+                                                            </div>
+                                                            <button class="dropdown-item btn" onclick="map_luncher(this)" type="button" data-map="edit_map" data-form="edit_location">
+                                                                <span class="mainColor2 font14 fontBold">Modify
+                                                                    Location</span>
+                                                            </button>
+                                                            <button class="dropdown-item" type="button">
+                                                                <span class="mainRed font14 fontBold">Delete
+                                                                    Location</span>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-12 mt-3 mb-3">
+                                            <div class="location_card">
+                                                <input type="radio" name="location" class="float_input checkLocation"
+                                                    onchange="checkLocation()">
+                                                <div class="d-flex align-items-center gap20 flex-wrap">
+                                                    <img class="width16" src="images/workIcon.png" alt="paper plane">
+                                                    <div class="d-flex flex-column gap5 ">
+                                                        <h6 class="mb-0 fontBold">Work</h6>
+                                                        <span class="font13 mainBlue fontBold">Add your business
+                                                            address</span>
+                                                        <!-- <p class="location_address">King Khalid International Airport, Riyadh, Saudi Arabia</p> -->
+                                                    </div>
+                                                </div>
+                                                <button type="button" data-map="add_map" data-form="add_location" onclick="map_luncher(this)" class="btn option_float"><img class="width20"
+                                                        src="images/add.png" alt="add"></button>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-12 mt-3 mb-3">
+                                            <button class="btn round_btn up bgColor2 w-100" onclick="map_luncher(this)" data-map="add_map" data-form="add_location">Add
+                                                Another Address</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="add_location">
+                                <div class="tab_title">
+                                    <h4 class="fontBold">Add Addresses</h4>
+                                    <span class="font17">Please Provide us with further details ,our Support team will
+                                        get
+                                        back to you as soon as possible.</span>
+                                </div>
+                                <div class="main_card">
+                                    <form action="">
+                                        <div class="row flex-column">
+                                            <div class="col-12 mb-3">
+                                                <div id="add_map" style="height: 300px"></div>
+                                                <input type="hidden" id="add_map_lat">
+                                                <input type="hidden" id="add_map_lng">
+                                                <div id="add_map_output" class="map_output"></div>
+                                                <div class="map_form" id="add_map_input_form">
+                                                    <span><ion-icon name="search-outline"></ion-icon></span>
+                                                    <input type="text" id="add_map_search-input" placeholder="Search for area, street, land mark">
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-8 col-12 mt-3 mb-3">
+                                                <span class="font14">Address Type </span>
+                                                <div class="input_select">
+                                                    <select class="niceSelect wide">
+                                                        <option selected="" disabled="" value=""> Please Select Address Type
+                                                        </option>
+                                                        <option value="">Type 1 </option>
+                                                        <option value="">Type 2</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-8 col-12 mt-3 mb-3">
+                                                <span class="font14">Address Description</span>
+                                                <div class="form__label">
+                                                    <input class="default_input" type="number"
+                                                        placeholder="Apartment Number / Building Name / Street Address">
+                                                    <label class="float__label">Apartment Number / Building Name / Street
+                                                        Address</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-8 col-12 mt-3 mb-3">
+                                                <span class="font14">Nearest known location </span>
+                                                <div class="input_select">
+                                                    <select class="niceSelect wide">
+                                                        <option selected="" disabled="" value=""> Nearest Known Location -
+                                                            Optional</option>
+                                                        <option value="">Apartment </option>
+                                                        <option value="">Villa</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-5 col-md-8 col-12 mt-3 mb-3">
+                                                <div class="d-flex align-items-center gap20">
+                                                    <button class="btn round_btn up bgColor2 w-100" data-form="select_location">Add
+                                                        Another Address</button>
+                                                    <button class="btn"><img src="images/remove.png" class="width40"
+                                                            alt="remove"></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="edit_location">
+                                <div class="tab_title">
+                                    <h4 class="fontBold">Edit Addresses</h4>
+                                    <span class="font17">Please Provide us with further details ,our Support team will
+                                        get
+                                        back to you as soon as possible.</span>
+                                </div>
+                                <div class="main_card">
+                                    <form action="">
+                                        <div class="row flex-column">
+                                            <div class="col-12 mb-3">
+                                                <div id="edit_map" style="height: 300px"></div>
+                                                <input type="hidden" id="edit_map_lat">
+                                                <input type="hidden" id="edit_map_lng">
+                                                <div id="edit_map_output" class="map_output"></div>
+                                                <div class="map_form" id="edit_map_input_form">
+                                                    <span><ion-icon name="search-outline"></ion-icon></span>
+                                                    <input type="text" id="edit_map_search-input" placeholder="Search for area, street, land mark">
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-8 col-12 mt-3 mb-3">
+                                                <span class="font14">Address Type </span>
+                                                <div class="input_select">
+                                                    <select class="niceSelect wide">
+                                                        <option selected="" disabled="" value=""> Please Select Address Type
+                                                        </option>
+                                                        <option value="">Type 1 </option>
+                                                        <option value="">Type 2</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-8 col-12 mt-3 mb-3">
+                                                <span class="font14">Address Description</span>
+                                                <div class="form__label">
+                                                    <input class="default_input" type="number"
+                                                        placeholder="Apartment Number / Building Name / Street Address">
+                                                    <label class="float__label">Apartment Number / Building Name / Street
+                                                        Address</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-8 col-12 mt-3 mb-3">
+                                                <span class="font14">Nearest known location </span>
+                                                <div class="input_select">
+                                                    <select class="niceSelect wide">
+                                                        <option selected="" disabled="" value=""> Nearest Known Location -
+                                                            Optional</option>
+                                                        <option value="">Apartment </option>
+                                                        <option value="">Villa</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-5 col-md-8 col-12 mt-3 mb-3">
+                                                <div class="d-flex align-items-center gap20">
+                                                    <button class="btn round_btn up bgColor2 w-100" data-form="select_location">Add
+                                                        Another Address</button>
+                                                    <button class="btn"><img src="images/remove.png" class="width40"
+                                                            alt="remove"></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="payment" role="tabpanel" aria-labelledby="payment-tab">
+                            <div class="tab_title">
+                                <h4 class="fontBold">Payment Method</h4>
+                                <span class="font17">is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy</span>
+                            </div>
+                            <div class="main_card">
+                                <div class="row flex-column">
+                                    <div class="col-lg-4 col-6 mb-3 mt-3">
+                                        <button class="btn round_btn up w-100 bgColor2">Add New Payment Method</button>
+                                    </div>
+                                    <div class="col-lg-6 col-12 mb-3 mt-3">
+                                        <div class="payment_card">
+                                            <div class="d-flex align-items-center justify-content-between mb-3">
+                                                <img src="images/mada.png" class="width40" alt="payment icon">
+                                                <span class="state_number">1452 6569 8556 6321</span>
+                                            </div>
+                                            <div class="d-flex align-items-center justify-content-between font12 mainColor3 fontBold">
+                                                <span>Awamer El Shabaka</span>
+                                                <div class="d-flex align-items-center gap5">
+                                                    <span>Expire date</span>
+                                                    <span>02/22</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-12 mb-3 mt-3">
+                                        <div class="payment_card">
+                                            <div class="d-flex align-items-center justify-content-between mb-3">
+                                                <img src="images/mada.png" class="width40" alt="payment icon">
+                                                <span class="state_number">1452 6569 8556 6321</span>
+                                            </div>
+                                            <div class="d-flex align-items-center justify-content-between font12 mainColor3 fontBold">
+                                                <span>Awamer El Shabaka</span>
+                                                <div class="d-flex align-items-center gap5">
+                                                    <span>Expire date</span>
+                                                    <span>02/22</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-12 mb-3 mt-3">
+                                        <div class="payment_card">
+                                            <div class="d-flex align-items-center justify-content-between mb-3">
+                                                <img src="images/mada.png" class="width40" alt="payment icon">
+                                                <span class="state_number">1452 6569 8556 6321</span>
+                                            </div>
+                                            <div class="d-flex align-items-center justify-content-between font12 mainColor3 fontBold">
+                                                <span>Awamer El Shabaka</span>
+                                                <div class="d-flex align-items-center gap5">
+                                                    <span>Expire date</span>
+                                                    <span>02/22</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="wallet" role="tabpanel" aria-labelledby="wallet-tab">
+                            <div class="tab_title">
+                                <h4 class="fontBold">Wallet</h4>
+                                <span class="font17">is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy</span>
+                            </div>
+                            <div class="main_card">
+                                <div class="row flex-column align-items-center mb-4">
+                                    <div class="col-lg-6 col-md-8 col-12 mb-2 mt-2">
+                                        <div class="Balance_panner">
+                                            <span>Your current balance</span>
+                                            <span class="Wallet_Balance">49.99  SR</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-6 mb-2 mt-2">
+                                        <button class="btn round_btn up w-100 bgColor2 font12">Adding Balance To The Wallet</button>
+                                    </div>
+                                </div>
+                                <div class="table-responsive Balance_table">
+                                    <table class="table table-borderless">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">Processes</th>
+                                                <th scope="col">Date added</th>
+                                                <th scope="col">Expiry date</th>
+                                                <th scope="col">value</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Wallet</td>
+                                                <td>2020/2/20</td>
+                                                <td>2020/3/20</td>
+                                                <td>
+                                                    <!-- <span class="mainRed">30</span> -->
+                                                    <span class="mainGreen">30</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Wallet</td>
+                                                <td>2020/2/20</td>
+                                                <td>2020/3/20</td>
+                                                <td>
+                                                    <span class="mainRed">30</span>
+                                                    <!-- <span class="mainGreen">30</span> -->
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Wallet</td>
+                                                <td>2020/2/20</td>
+                                                <td>2020/3/20</td>
+                                                <td>
+                                                    <!-- <span class="mainRed">30</span> -->
+                                                    <span class="mainGreen">30</span>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                  </div>
+                                
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="ticket" role="tabpanel" aria-labelledby="ticket-tab">
+                            <div class="ticket_cards">
+                                <div class="tab_title">
+                                    <div class="d-flex align-items-center gap8">
+                                        <h4 class="fontBold">My Tickets</h4>
+                                        <img class="width38" src="images/ticcket.png" alt="ticket">
+                                    </div>
+                                    <span class="font17">Please Provide Us With Further Details ,Our Support Team Will Get Back To You As Soon As Possible.</span>
+                                </div>
+                                <div class="main_card">
+                                    <div class="row flex-column">
+                                        <div class="col-lg-4 col-6 mb-2">
+                                            <button class="btn round_btn up w-100 bgColor2 font12" data-target="#add_ticket" data-toggle="modal">Adding Ticket</button>
+                                        </div>
+                                        <div class="col-lg-8 col-12 mb-3 mt-3">
+                                            <button class="ticket_card btn w-100 txt_start" data-form="ticket_details">
+                                                <div class="d-flex flex-column gap5">
+                                                    <span class="fontBold font13">Ticket No # 19555</span>
+                                                    <div class="d-flex align-items-center gap10 font12">
+                                                        <span>order No</span> <span class="mainColor3">No order numner fot thos ticket</span>
+                                                    </div>
+                                                    <div class="d-flex align-items-center gap10 font12 mainColor3">
+                                                        <span>06:00 AM</span> -  <span>07:00 AM</span>
+                                                    </div>
+                                                </div>
+                                                <div class="option_float d-flex align-items-center gap20">
+                                                    <span class="ticket_status new">New</span>
+                                                    <!-- <span class="ticket_status finish">finished</span> -->
+                                                    <img src="images/arrow.png" class="width10" alt="">
+                                                </div>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ticket_details">
+                                <div class="tab_title">
+                                    <button class="btn d-flex align-items-center gap10" data-form="ticket_cards">
+                                        <h4 class="fontBold mb-0">Ticket No # 19555</h4>
+                                        <img src="images/arrow.png" class="width15" alt="arrow">
+                                    </button>
+                                </div>
+                                <div class="main_card">
+                                    <div class="table-responsive">
+                                        <table class="table table-borderless">
+                                            <tbody>
+                                                <tr>
+                                                    <td class="mainColor3">Status</td>
+                                                    <td class="mainGreen">New</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="mainColor3">subject</td>
+                                                    <td class="mainColor3">Enquiry</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="mainColor3">ticket time</td>
+                                                    <td class="mainColor3">01/02/2023  -  07:00 AM</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="mainColor3">order No</td>
+                                                    <td class="mainColor3">1994</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="d-flex flex-column gap10 mb-3">
+                                        <h6 class="font14" style="padding:0 0.75rem;">Pic</h6>
+                                        <div class="d-flex align-items-center gap10" style="padding:0 0.75rem;">
+                                            <img src="images/ticket_img.png" class="width90 height80 radius5" alt="ticket img">
+                                            <img src="images/ticket_img.png" class="width90 height80 radius5" alt="ticket img">
+                                            <img src="images/ticket_img.png" class="width90 height80 radius5" alt="ticket img">
+                                        </div>
+                                    </div>
+                                    <div class="d-flex flex-column gap10 mb-3">
+                                        <h6 class="font14 fontBold" style="padding:0 0.75rem;">The Replay</h6>
+                                        <div class="d-flex align-items-center gap10" style="padding:0 0.75rem;">
+                                            <!-- <p class="mb-0 font13">
+                                                No Response Yet, Please Wait
+                                            </p> -->
+                                            <p class="mb-0 font13">
+                                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the 
+industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and 
+scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into 
+electronic typesetting, remaining essentially 
+unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum 
+passages, and more recently with desktop publishing  software like Aldus PageMaker including versions of 
+Lorem Ipsum
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- end content -->
+    <footer>
+        <div class="container">
+            <div class="foorer_wrapper">
+                <div class="logo_social">
+                    <img class="logo_footer" src="images/logo.png" alt="logo">
+                    <p class="mb-0 font12 text-white">
+                        Nostrud exertation ullamco labor nisi
+                        aliquip commodo duis.
+                    </p>
+                    <div class="social">
+                        <a class="raise" href="">
+                            <img class="width10" src="images/facebook.png" alt="facebook">
+                        </a>
+                        <a class="raise" href="">
+                            <img src="images/twitter.png" alt="facebook">
+                        </a>
+                        <a class="raise" href="">
+                            <img src="images/google-plus.png" alt="facebook">
+                        </a>
+                        <a class="raise" href="">
+                            <img src="images/instagram.png" alt="facebook">
+                        </a>
+                    </div>
+                </div>
+                <div class="footer_list">
+                    <h6 class="mb-5 text-white fontBold">Address</h6>
+                    <ul>
+                        <li>
+                            <div>
+                                <span class="height15 P_top_3"><ion-icon name="location-outline"></ion-icon></span>
+                                <span class="font13">
+                                    1500 Treat Ave, Suite 200
+                                    San Francisco, CA 94110
+                                </span>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <span class="height15 P_top_3"><ion-icon name="mail-outline"></ion-icon></span>
+                                <span class="font13">
+                                    vctung@outlook.com
+                                </span>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <span class="height15 P_top_3"><ion-icon name="call-outline"></ion-icon></span>
+                                <span class="font13">
+                                    1-800-800-2299 (Support)
+                                </span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer_list">
+                    <h6 class="mb-5 text-white fontBold">Links</h6>
+                    <ul>
+                        <li>
+                            <a class="default_link" href="index.html">Home</a>
+                        </li>
+                        <li>
+                            <a class="default_link" href="All_Brands.html">Brands</a>
+                        </li>
+                        <li>
+                            <a class="default_link" href="All_Stores.html">Shops</a>
+                        </li>
+                        <li>
+                            <a class="default_link" href="All_Offers.html">Promotion And Details</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer_list">
+                    <h6 class="mb-5 text-white fontBold">Support</h6>
+                    <ul>
+                        <li>
+                            <a class="default_link" href="Help_Center.html">FAQ</a>
+                        </li>
+                        <li>
+                            <a class="default_link" href="Contact_us.html">Call Us</a>
+                        </li>
+                        <li>
+                            <a class="default_link" href="Help_Center.html">Help Center</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer_list">
+                    <h6 class="mb-5 text-white fontBold">More</h6>
+                    <ul>
+                        <li>
+                            <a class="default_link" href="About_us.html">About Abar</a>
+                        </li>
+                        <li>
+                            <a class="default_link" href="Privacy.html">Privacy Policy</a>
+                        </li>
+                        <li>
+                            <a class="default_link" href="Terms.html">Terms Of Use</a>
+                        </li>
+                        <li>
+                            <a class="default_link" href="Blog.html">Blog</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <hr class="mainBgOpaci">
+        <div class="container">
+            <div class="d-flex align-items-center justify-content-between">
+                <span class="font12 text-white d-flex align-items-center gap5">Copyrights <span
+                        class="mb-0 font25 height27">©</span> 2023 Abar</span>
+                <span class="text-white font13">Design By <a class="default_link text-white" href="https://aait.sa/"
+                        target="_blank">Awammer El Shabaka</a></span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- map modal -->
+    <div id="mapModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal_header">
+                    <button class="btn dismiss_btn" data-dismiss="modal"><ion-icon
+                            name="close-outline"></ion-icon></button>
+                    <h6 class="mb-0 text-center">DELIVERY ADDRESS</h6>
+                </div>
+
+                <div class="modalBody">
+                    <div class="position-relative">
+                        <div id="map_modal" style="height: 300px"></div>
+                        <div class="map_form" id="map_modal_input_form">
+                            <span><ion-icon name="search-outline"></ion-icon></span>
+                            <input type="text" id="map_modal_search-input" placeholder="Search for area, street, land mark">
+                        </div>
+                    </div>
+                    <input type="hidden" id="map_modal_lat">
+                    <input type="hidden" id="map_modal_lng">
+                    <h6 class="mt-3 mb-2 mainColor3 font13">Delivery to</h6>
+                    <div id="map_modal_output" class="font14 mb-2"></div>
+                    <button class="btn round_btn up bgColor2 w-100 height45">Delivery Here </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- add ticket modal -->
+    <div id="add_ticket" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal_header">
+                    <button class="btn dismiss_btn" data-dismiss="modal"><ion-icon
+                            name="close-outline"></ion-icon></button>
+                    <div class="d-flex align-items-center justify-content-center gap8">
+                        <h4 class="fontBold">My Tickets</h4>
+                        <img class="width38" src="images/ticcket.png" alt="ticket">
+                    </div>
+                    <p class="text-center font13">
+                        Please Provide Us With Further Details ,Our Support Team Will Get Back To You As Soon As Possible.
+                    </p>
+                </div>
+
+                <div class="modalBody">
+                    <form action="">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8 col-12 mt-2 mb-2">
+                                <span class="font14">Reason for communication</span>
+                                <div class="input_select">
+                                    <select class="niceSelect wide">
+                                        <option selected="" disabled="" value=""> Please Select Reason For Communication</option>
+                                        <option value="">Type 1 </option>
+                                        <option value="">Type 2</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-lg-8 col-12 mt-2 mb-2">
+                                <span class="font14">Details</span>
+                                <div class="form__label">
+                                    <textarea class="default_input" placeholder="Please Write Details"></textarea>
+                                </div>
+                            </div>
+                            <div class="col-lg-8 col-12 mt-2 mb-2">
+                                <div class="d-flex align-items-center gap5">
+                                    <div class="update_images">
+                                        <div class="img-block multiple">
+                                            <input class="heddenUploud float_input" data-input="files" id="files_input" name="files[]" multiple type="file" />
+                                            <div class="uploud_label">
+                                                <span class="material-icons mainColor3">add_box</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="uploaded__area" id="files_cont"></div>
+                                </div>
+                            </div>
+                            <div class="col-lg-8 col-12 mt-2 mb-2">
+                                <div class="d-flex align-items-center gap10">
+                                    <button class="btn round_btn up width200 bgColor2">Send Ticket</button>
+                                    <button class="btn text-danger">Cancel</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- search modal -->
+    <div id="search_modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content" style="background-color: unset;">
+                <div class="modalBody p-0">
+                    <form action="">
+                        <div class="form__label mt-0">
+                            <input type="search" class="default_input" placeholder="Enter Key Word">
+                            <label class="float__label">Enter Key Word</label>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/jquery.nice-select.min.js"></script>
+    <script type="text/javascript">
+        new WOW().init();
+    </script>
+    <!-- ionicon fonts -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <!-- map api -->
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBYTS-hi8VVLRkf1y70RJnVlU6Q-VLrV5I&libraries=places&language=ar"></script>
+    <script src="js/map.js"></script>
+    <!-- main js -->
+    <script src="js/main.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $(".niceSelect").niceSelect();
+        })
+    </script>
+
+    <script>
+
+        let inputsFiles = {};
+        $(".heddenUploud").on("change", function (event) {
+            let input = $(this).data("input");
+            const selectedFilesCont = document.getElementById(input + "_cont");
+            if (!!inputsFiles[input]) {
+                let files = new DataTransfer();
+                for (let i = 0; i < event.target.files.length; i++) {
+                    files.items.add(event.target.files[i]);
+                }
+                for (let i = 0; i < inputsFiles[input].length; i++) {
+                    files.items.add(inputsFiles[input][i]);
+                }
+                inputsFiles[input] = files.files;
+                selectedFilesCont.innerHTML = "";
+            } else {
+                inputsFiles[input] = event.target.files;
+            }
+            if (!!inputsFiles[input] && inputsFiles[input].length > 0) {
+                for (let i = 0; i < inputsFiles[input].length; i++) {
+                    const fileType = inputsFiles[input][i].type.split("/")[0];
+                    const fileExtension = inputsFiles[input][i].name.split(".")[1];
+                    if (fileType === "image") {
+                        let src = URL.createObjectURL(inputsFiles[input][i]);
+                        $("#" + input + "_cont").append(` <div class="file_">
+                                                        <a data-fancybox="gallery" href="${src}">
+                                                            <img src="${src}" alt="">
+                                                        </a>
+                                                        <div class="btn remove_media" onclick="deleteFile(this ,'${inputsFiles[input][i].name}' ,'${input}')"><ion-icon name="close-outline"></ion-icon></div>
+                                                    </div>`);
+                    } 
+                    else if (fileType === "video") {
+                        let src = URL.createObjectURL(inputsFiles[input][i]);
+
+                        $("#" + input + "_cont").append(`<div class="file_">
+                                                        <a data-fancybox="gallery" data-type="video" href="${src}">
+                                                            <video controls>
+                                                                <source src="${src}" type="video/mp4">
+                                                            </video>
+                                                            <div class="play-button"><img src="img/play_icon.png"></div>
+                                                        </a>
+                                                        <div class="btn remove_media" onclick="deleteFile(this ,'${inputsFiles[input][i].name}' ,'${input}')"><ion-icon name="close-outline"></ion-icon></div>
+                                                    </div>`);
+                    }
+                     else if (
+                        ["doc", "docx", "xls", "pdf"].indexOf(fileExtension) != -1
+                    ) {
+                        $("#" + input + "_cont").append(`<div class="file_">
+                                                        <div class="docs_file">
+                                                            <div class="d-flex flex-column align-items-center justify-content-center h-100 p-2">
+                                                                <span class="font10">${inputsFiles[input][i].name}</span>
+                                                                <span><i class="far fa-file-pdf mr-1 ml-1"></i></span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="btn remove_media" onclick="deleteFile(this ,'${inputsFiles[input][i].name}' ,'${input}')"><ion-icon name="close-outline"></ion-icon></div>
+                                                    </div>`);
+                    }
+                }
+            }
+            event.target.files = inputsFiles[input];
+        });
+
+        function deleteFile(ele, name, input) {
+            let filesInput = document.getElementById(input + "_input");
+            let files = new DataTransfer();
+            let deleted = null;
+            for (let i = 0; i < filesInput.files.length; i++) {
+                if (filesInput.files[i].name == name && deleted != name) {
+                    deleted = name;
+                    continue;
+                }
+                files.items.add(filesInput.files[i]);
+            }
+            filesInput.files = files.files;
+            inputsFiles[input] = files.files;
+            $(ele).parent().remove();
+        }
+
+
+        $(".slide_block").hide();
+        $(document).on("change", ".slide_check", function () {
+            if ($(this).is(":checked")) {
+                $(this).parents("label").next(".slide_block").slideDown(200);
+            } else {
+                $(this).parents("label").next(".slide_block").slideUp(200);
+            }
+        });
+    </script>
+
+
+    <script>
+        $(document).ready(function () {
+            var sideButtons = document.querySelector('.navBar ul').getElementsByTagName('li');
+            for (var i = 0; i < sideButtons.length; i++) {
+                const a = sideButtons[i].getElementsByTagName('a')[0];
+                if (window.location.href == a.href) {
+                    sideButtons[i].classList.add('active');
+                    break;
+                }
+            }
+        })
+    </script>
+    <script>
+        function checkLocation() {
+            // Get the checkbox
+            let checkBox = document.getElementsByClassName("checkLocation");
+
+            let location_card = document.getElementsByClassName("location_card");
+
+            for (var i = 0; i < checkBox.length; i++) {
+                if (checkBox[i].checked == true) {
+                    checkBox[i].parentElement.classList.add("checked")
+                } else {
+                    checkBox[i].parentElement.classList.remove("checked")
+                }
+            }
+        }
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            $(".btn[data-form]").on("click", function (e) {
+                e.preventDefault()
+                $("." + $(this).attr("data-form")).slideToggle(300).siblings().hide();
+            });
+        })
+    </script>
+</body>
+
+</html>
